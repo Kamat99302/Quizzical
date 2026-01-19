@@ -9,7 +9,7 @@ export default function StartScreen({handleClick, difficulty, onDifficultyChange
         <main>
             <div className="start-screen">
                 <span><IoSparklesOutline/>Test Your Knowledge</span>        
-                <h1>Quizzical</h1>
+                <h1>QuizQuest</h1>
                 <p>Challenge yourself with fun trivia questions</p>
 
               

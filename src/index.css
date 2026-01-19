@@ -42,7 +42,7 @@ body {
   right: 20px;
   font-size: 2rem;
   cursor: pointer;
-  z-index: 1000;
+  
   /* Eviter de selectionner du texte au clic */
   user-select: none;
   -webkit-user-select: none;
@@ -55,11 +55,16 @@ body {
   left: 20px;
   font-size: 2rem;
   cursor: pointer;
-  z-index: 1000;
   /* Eviter de selectionner du texte au clic */
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
+}
+
+.btn-mode,
+.btn-home,
+main span{
+  z-index: 1000;
 }
 
 main {
@@ -97,7 +102,7 @@ h1 {
 .quizz-button-section{
   display: flex;
   justify-content: center;
-flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: 2em;
 }
 
