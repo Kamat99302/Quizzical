@@ -1,0 +1,280 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100vh;
+  color: black;
+}
+
+.btn-mode{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1000;
+  /* Eviter de selectionner du texte au clic */
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+.btn-home{
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1000;
+  /* Eviter de selectionner du texte au clic */
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+main {
+  margin-top: 3rem; /* Descend toute la section */
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.start-screen button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+/* Section Quizz */
+.quizz p{
+
+  font-family: 'karla';
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.quizz.dark-mode-characters p {
+  color: white;
+}
+
+.quizz-button-section{
+  display: flex;
+  justify-content: center;
+flex-wrap: wrap;
+  gap: 2em;
+}
+
+.quizz button{
+  border-radius: 10px;
+  padding: 0.8em 2em;
+  background-color: white;
+  border: 2px solid #4D5B9E;
+  font-family: 'inter';
+  font-weight: 500;
+  color: #293264;
+  cursor: pointer;
+}
+
+/* États des boutons */
+.quizz button.correct-answer{
+  background-color: green;
+}
+
+.quizz button.selected{
+  background-color: #D6DBF5;
+}
+
+.quizz button.wrong-answer{
+  background-color: red;
+}
+
+.quizz button:hover,
+.check-answers-btn:hover,
+.start-screen button:hover,
+.new-game-btn:hover,
+.btn-mode:hover,
+.btn-home:hover {
+  transform: scale(1.1);
+}
+
+/* 5. Footer / Bottom Elements */
+.check-answers-btn{
+  border-radius: 15px;
+  border: 1px solid transparent;
+  margin-top: 2rem;
+  padding: 1em 2.5em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #4D5B9E;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.bottom-el{
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  margin-top: 2em;
+  gap: 1em;
+}
+
+.bottom-el p{
+  font-family: 'karla';
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.new-game-btn{
+  border-radius: 15px;
+  border: 1px solid transparent;
+  padding: 1em 2.5em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #4D5B9E;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+
+
+
+/* Ajustements pour petits écrans */
+@media (max-width: 400px) {
+  main span {
+    margin-bottom: 0.5rem;
+  }
+  
+  main h1 {
+    font-size: 2.5em; /* Réduis un peu le titre */
+    margin-top: 0;
+  }
+  
+  main p {
+    margin-bottom: 10px; /* Réduis l'espace */
+  }
+}
+
+
+/* ADAPTATION SUR GRAND ÉCRAN  */
+@media (min-width: 768px) {
+
+
+body::before {
+  width: 200px;
+  height: 200px;
+  top: -10px;
+  left: -10px;
+  animation: circle1 7s infinite ease-in-out;
+}
+
+@keyframes circle1 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(40px, 40px) scale(1.05);
+  }
+}
+
+
+body::after {
+  width: 200px;
+  height: 200px;
+  bottom: -50px;
+  right: -10px;
+  animation: circle2 9s infinite ease-in-out;
+}
+
+
+
+@keyframes circle2 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-50px, -30px) scale(1.08);
+  }
+}
+
+
+
+
+
+
+
+#root::after {
+  width: 200px;
+  height: 200px;
+  bottom: 20%;
+  left: 10%;
+  animation: square4 6s infinite ease-in-out;
+}
+
+@keyframes square4 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(35px, -35px) scale(1.04);
+  }
+}
+
+
+
+
+
+
+
+
+  h1 {
+    font-size: 3.2em;
+  }
+
+  .quizz p {
+    font-size: 1.5em;
+  }
+
+  .quizz-button-section { 
+    justify-content: center;
+    gap: 2em;
+  }
+}
