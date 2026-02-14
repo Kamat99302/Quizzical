@@ -115,7 +115,7 @@ quizzical/
 
 ## 🌐 Démo en ligne
 
-[Voir la démo](https://quizzicalmatt.netlify.app/)
+[Voir la démo](https://quizzquestmatt.netlify.app/)
 
 ## 🔄 Évolutions futures possibles
 
